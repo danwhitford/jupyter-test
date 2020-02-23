@@ -8,6 +8,6 @@ COPY ./notebooks/ ${HOME}/notebooks/
 
 COPY ./NuGet.config ${HOME}/nuget.config
 
-RUN chown -R ${NB_UID} ${HOME}
+RUN chown -R ${USER}:${USER} ${HOME}
 USER ${USER}
 
