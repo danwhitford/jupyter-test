@@ -1,3 +1,5 @@
+FROM fsharp
+
 # Copy notebooks
 
 COPY ./notebooks/ ${HOME}/notebooks/
@@ -8,3 +10,4 @@ COPY ./NuGet.config ${HOME}/nuget.config
 
 RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
+
